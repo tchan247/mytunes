@@ -26,7 +26,7 @@
       $(function(){
         // set up model objects
         var library = new Songs(songData);
-        var library2 = new Songs([
+        var songQueue = new SongQueue([
   {
     url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3",
     title: "One In ",
@@ -48,8 +48,8 @@
     artist: "Ah",
   }
 ]);
-        var songQueue = new SongQueue([]);
-        var app = new AppModel({library: library, songQueue: library2});
+
+        var app = new AppModel({library: library, songQueue: songQueue});
 
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
