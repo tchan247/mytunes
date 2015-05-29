@@ -26,30 +26,7 @@
       $(function(){
         // set up model objects
         var library = new Songs(songData);
-        var songQueue = new SongQueue([
-  {
-    url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3",
-    title: "One In ",
-    artist: "Aali",
-  },
-  {
-    url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/03+Age+Ain%27t+Nothing+But+A+Number.mp3",
-    title: "Age Ain",
-    artist: "Aal",
-  },
-  {
-    url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/05+Hot+Like+Fire.mp3",
-    title: "Hot Lie",
-    artist: "Aah",
-  },
-  {
-    url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/06+If+Your+Girl+Only+Knew.mp3",
-    title: "If Youew",
-    artist: "Ah",
-  }
-]);
-
-        var app = new AppModel({library: library, songQueue: songQueue});
+        var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
